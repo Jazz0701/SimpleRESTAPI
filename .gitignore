@@ -1,0 +1,5 @@
+node_modules/
+.env
+src/config/simple-restapi-32f83-firebase-adminsdk.json
+
+
