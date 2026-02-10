@@ -2,7 +2,7 @@ const db = require("../config/firebase.js");
 
 
 // GET /users Retrieve all users
-exports.getUsers = async(req, res) => {
+exports.getUsers = async(req, res) => {       //endpoint to retrieve all users
     //Read users from database
     try{
     const data = await db.ref("users").once("value");
@@ -35,7 +35,7 @@ exports.putUser = async (req, res) => {    //endpoint to update a user
 
 
 // DELETE /users/:id Delete a user
-exports.deleteUser = async (req, res) => {
+exports.deleteUser = async (req, res) => {   //endpoint to delete a user
     try {
         const userRef = await db.ref("users/" + req.params.id).remove();
         res.status(200).json({message:"user deleted"});

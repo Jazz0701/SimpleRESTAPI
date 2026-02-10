@@ -14,7 +14,7 @@ exports.getExpense = async(req, res) => {
 };
 
 // POST /users Add a new expense
-exports.postExpense = async (req, res) => {    //endpoint to add a new user
+exports.postExpense = async (req, res) => {    //endpoint to add a new expense
     try {
         const newExpenseRef = await db.ref("expenses").push(req.body);     
         res.status(201).json({message:"expense added"});                           
@@ -24,7 +24,7 @@ exports.postExpense = async (req, res) => {    //endpoint to add a new user
 };
 
 // PUT /users/:id Update a expense
-exports.putExpense = async (req, res) => {    //endpoint to update a user
+exports.putExpense = async (req, res) => {    //endpoint to update a expense
     try {                                                    
         const expenseRef = await db.ref("expenses/" + req.params.id).update(req.body);          
         res.status(200).json({message:"expense updated"});  
