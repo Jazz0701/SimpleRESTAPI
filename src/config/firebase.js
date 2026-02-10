@@ -19,12 +19,6 @@ admin.initializeApp({
   databaseURL: process.env.FIREBASE_DATABASE_URL,
 });
 
-// var serviceAccount = require("./simple-restapi-32f83-firebase-adminsdk.json");
-
-// admin.initializeApp({
-//   credential: admin.credential.cert(serviceAccount),
-//   databaseURL: "https://simple-restapi-32f83-default-rtdb.firebaseio.com"
-// });
 
 const db = admin.database();
 module.exports = db;
