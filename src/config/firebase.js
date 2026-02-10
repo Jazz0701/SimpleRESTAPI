@@ -19,7 +19,7 @@ admin.initializeApp({
   databaseURL: process.env.FIREBASE_DATABASE_URL,
 });
 
-var serviceAccount = require("./simple-restapi-32f83-firebase-adminsdk.json");
+// var serviceAccount = require("./simple-restapi-32f83-firebase-adminsdk.json");
 
 // admin.initializeApp({
 //   credential: admin.credential.cert(serviceAccount),
